@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<konferencia>
+    <cim id="konferencia1">Miért jó az Erős Pista?</cim>
+    <hallgatok>
+        <hallgato id="01">
+            <nev id="001">Minta Áron</nev>
+            <lakcim id="lakcim1">1234 Budapest, Fő út 24.</lakcim>
+        </hallgato>
+    </hallgatok>
+    <helyszin id="helyszin1">1233 Budapest, Bartók Béla út 11.</helyszin>
+    <eloado>
+        <nev id="02">Erős Pista</nev>
+        <adoszam id="adoszam1">987654321</adoszam>
+        <lakcim id="lakcim2">6000 Kecskemét, Szolnoki út 35.</lakcim>
+    </eloado>
+    <datum id="datum1">2023. 09. 27.</datum>
+</konferencia>
