@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:mstns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Orarend">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Ora" type ="oraTipus" minOccures="0" maxOccurs="6"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="oraTipus">
+		<xs:sequence>
+			<xs:element name="Kurzusnev" type="xs:string"/>
+			<xs:element name="Idopont" type="idopontTipus"/>
+			<xs:element name ="Tanterem" type="xs:string"/>
+			<xs:element name ="Oktato" type="xs:string"/>
+			<xs:element name ="Szak" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:int" use="required"/>
+		<xs:attribute name ="tipus" type="oraTipusTipus" default="Eloadas"/>
+	</xs:complexType>
+	<xs:simpleType name="oraTipusTipus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Eloadas"/>
+			<xs:enumeration value="Gyakorlat"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name ="idopontTipus">
+		<xs:sequence>
+			<xs:element name="Nap" type="napTipus"/>
+			<xs:element name="Kezdet" type="idopontOraTipus"/>
+			<xs:element name="Vege" type="idopontOraTipus"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name ="napTipus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Hetfo"/>
+			<xs:enumeration value="Kedd"/>
+			<xs:enumeration value="Szerda"/>
+			<xs:enumeration value="Csutortok"/>
+			<xs:enumeration value="Pentek"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name ="idopontOraTipus">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:minInclusive value ="8"/>
+			<xs:maxInclusive value ="18"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>

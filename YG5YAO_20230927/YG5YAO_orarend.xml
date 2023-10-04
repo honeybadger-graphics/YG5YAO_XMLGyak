@@ -1,5 +1,8 @@
-<YG5YAO_Orarend>
-	<Ora ID="01" TIPUS="Eloadas" >
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE YG5YAO_Orarend SYSTEM "YG5YAO_orerend.dtd">
+	<YG5YAO_Orarend xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
+					xs:noNamespaceSchemaLocation="YG5YAO_orarend.xsd">
+	<Ora Id="01" TIPUS="Eloadas" >
 		<Kurzusnev>WEB technologiak</Kurzusnev>
 		<Oktato>Agardi Anita </Oktato>
 		<Tanterem>XXX A1 III. em. 305-306</Tanterem>
@@ -10,7 +13,7 @@
 		</Idopont>
 		<Szak>Mernokinformatikus</Szak>
 	</Ora>
-	<Ora ID="02" TIPUS="Gyakorlat" >
+	<Ora Id="02" TIPUS="Gyakorlat" >
 		<Kurzusnev>WEB technologiak</Kurzusnev>
 		<Oktato>Agardi Anita</Oktato>
 		<Tanterem>In/202 In II. em. 202</Tanterem>
@@ -21,7 +24,7 @@
 		</Idopont>
 		<Szak>Mernokinformatikus</Szak>
 	</Ora>
-	<Ora ID="03" TIPUS="Eloadas" >
+	<Ora Id="03" TIPUS="Eloadas" >
 		<Kurzusnev>Adatkezeles XMLben</Kurzusnev>
 		<Oktato>Dr. Bednarik Laszlo</Oktato>
 		<Tanterem>XXXII A1 magasfsz</Tanterem>
@@ -32,7 +35,7 @@
 		</Idopont>
 		<Szak>Mernokinformatikus</Szak>
 	</Ora>
-	<Ora ID="04" TIPUS="Eloadas" >
+	<Ora Id="04" TIPUS="Eloadas" >
 		<Kurzusnev>WEBes alkalmazasok CSharp</Kurzusnev>
 		<Oktato>Arvai Laszlo</Oktato>
 		<Tanterem>In/101 In I. e. 101</Tanterem>
@@ -43,7 +46,7 @@
 		</Idopont>
 		<Szak>Mernokinformatikus</Szak>
 	</Ora>
-	<Ora ID="05" TIPUS="Gyakorlat" >
+	<Ora Id="05" TIPUS="Gyakorlat" >
 		<Kurzusnev>WEBes alkalmazasok CSharp</Kurzusnev>
 		<Oktato>Dr. Mileff Peter</Oktato>
 		<Tanterem>In/101 In I. e. 101</Tanterem>
@@ -54,7 +57,7 @@
 		</Idopont>
 		<Szak>Mernokinformatikus</Szak>
 	</Ora>
-	<Ora ID="06" TIPUS="Gyakorlat" >
+	<Ora Id="06" TIPUS="Gyakorlat" >
 		<Kurzusnev>Adatkezeles XMLben</Kurzusnev>
 		<Oktato>Dr. Bednarik Laszlo</Oktato>
 		<Tanterem>In/101 In I. e. 101</Tanterem>

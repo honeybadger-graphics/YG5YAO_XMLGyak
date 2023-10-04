@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT YG5YAO_Orarend (Ora*)>
+<!ELEMENT Ora (Kurzusnev+, Oktato+,Tanterem+, Idopont+, Szak+)>
+<!ATTLIST Ora Id ID #REQUIRED>
+<!ATTLIST Ora TIPUS (Eloadas|Gyakorlat) #IMPLIED>
+<!ELEMENT Kurzusnev ( #PCDATA )>
+<!ELEMENT Oktato ( #PCDATA )>
+<!ELEMENT Tanterem ( #PCDATA )>
+<!ELEMENT Idopont (Nap+, Kezdet+, Vege+)>
+	<!ELEMENT Nap (#PCDATA)>
+	<!ELEMENT Kezdet (#PCDATA)>
+	<!ELEMENT Vege (#PCDATA)>
+<!ELEMENT Szak (#PCDATA)>
