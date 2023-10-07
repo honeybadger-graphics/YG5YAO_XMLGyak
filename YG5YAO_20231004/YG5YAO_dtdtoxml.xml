@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE YG5YAO_modell [<!ELEMENT YG5YAO_modell (A*, B*, C*, A_B*)>
+	<!ELEMENT A (Ab*, Ac)>
+	<!ATTLIST A Aa ID #REQUIRED>
+		<!ELEMENT Ab (Abx, Aby)>
+			<!ELEMENT Abx ( #PCDATA )>
+			<!ELEMENT Aby ( #PCDATA )>
+		<!ELEMENT Ac (Acd, Ace)>
+			<!ELEMENT Acd ( #PCDATA )>
+			<!ELEMENT Ace ( #PCDATA )>
+	<!ELEMENT B (Bb)>
+	<!ATTLIST B Ba ID #REQUIRED>
+	<!ATTLIST B Bc IDREF #IMPLIED>
+		<!ELEMENT Bb (Bbx, Bby)>
+			<!ELEMENT Bbx ( #PCDATA )>
+			<!ELEMENT Bby ( #PCDATA )>
+	<!ELEMENT C (Cb)>
+	<!ATTLIST C Ca ID #REQUIRED>
+		<!ELEMENT Cb ( #PCDATA )>
+	<!ELEMENT A_B (A_Bc)>
+	<!ATTLIST A_B A_B_a IDREF #IMPLIED>
+	<!ATTLIST A_B A_B_b IDREF #IMPLIED>
+		<!ELEMENT A_Bc ( #PCDATA )>
+]>
+<YG5YAO_modell>
+	<A Aa="YG01">
+		<Ab>
+			<Abx></Abx>
+			<Aby></Aby>
+		</Ab>
+		<Ac>
+			<Acd></Acd>
+			<Ace></Ace>
+		</Ac>
+	</A>
+	<B Ba="YG02" Bc="YG01">
+		<Bb>
+			<Bbx></Bbx>
+			<Bby></Bby>
+		</Bb>
+	</B>
+	<C Ca="YG03">
+		<Cb></Cb>
+	</C>
+	<A_B A_B_a="YG01" A_B_b="YG02">
+		<A_Bc></A_Bc>
+	</A_B>
+</YG5YAO_modell>
