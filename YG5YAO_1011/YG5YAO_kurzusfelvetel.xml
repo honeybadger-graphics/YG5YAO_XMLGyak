@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YG5YAO_kurzusfelvetel tanev="2023/2024_1" egyetem="ME">
+    <hallgato id="?">
+        <hnev></hnev>
+        <szulev></szulev>
+        <szak evf="evf"></szak>
+    </hallgato>
+    <kurzusok>
+        <kurzus id="kurzusNK" >
+            <kurzusnev></kurzusnev>
+            <kredit></kredit>
+            <hely></hely>
+            <idopont></idopont>
+            <oktato></oktato>
+        </kurzus>
+        <kurzus id="kurzusNK" nyelv="angol/magyar/....">
+            <kurzusnev></kurzusnev>
+            <kredit></kredit>
+            <hely></hely>
+            <idopont></idopont>
+            <oktato></oktato>
+        </kurzus>
+        <kurzus id="kurzusNK" jovahagy="igen/nem">
+            <kurzusnev></kurzusnev>
+            <kredit></kredit>
+            <hely></hely>
+            <idopont></idopont>
+            <oktato></oktato>
+            <gyakvezer></gyakvezer>
+        </kurzus>
+    </kurzusok>
+</YG5YAO_kurzusfelvetel>

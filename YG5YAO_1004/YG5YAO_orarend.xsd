@@ -7,7 +7,7 @@
 	<xs:element name="Orarend">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="Ora" type ="oraTipus" minOccures="0" maxOccurs="6"/>
+				<xs:element name="Ora" type ="oraTipus" minOccurs="0" maxOccurs="6"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
