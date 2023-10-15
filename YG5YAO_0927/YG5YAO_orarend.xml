@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE YG5YAO_Orarend SYSTEM "YG5YAO_orerend.dtd">
+<!--<!DOCTYPE YG5YAO_Orarend SYSTEM "YG5YAO_orerend.dtd">-->
 	<YG5YAO_Orarend xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
 					xs:noNamespaceSchemaLocation="YG5YAO_orarend.xsd">
 	<Ora Id="01" TIPUS="Eloadas" >

@@ -4,7 +4,7 @@
     xmlns="http://tempuri.org/XMLSchema.xsd"
     xmlns:mstns="http://tempuri.org/XMLSchema.xsd"
     xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<xs:element name="Orarend">
+	<xs:element name="YG5YAO_Orarend">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="Ora" type ="oraTipus" minOccurs="0" maxOccurs="6"/>
