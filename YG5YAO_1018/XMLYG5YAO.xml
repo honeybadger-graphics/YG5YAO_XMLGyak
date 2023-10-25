@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--TODO:	Ellenőrizni az egészet, hogy jó-e-->
+<!--		Kijavítni az esetleges hibákat-->
+<!--		XDM modell létrehozása-->
+<!--		XMLSchema létrehozása-->
+<Fesztiválok>
+    <Fesztivál FESZ_ID ="">
+        <név></név>
+        <helyszín></helyszín>
+        <év></év>
+        <Tulajdonos T_ID="" FESZ_FID="">
+            <név></név>
+            <adószám></adószám>
+            <alapítás></alapítás>
+            <bevétel></bevétel>
+        </Tulajdonos>
+        <Fellépő FEL_ID="" FESZ_FID="">
+            <név></név>
+            <ország></ország>
+            <díj></díj>
+        </Fellépő>
+        <Bár B_ID="" FESZ_FID="">
+            <név></név>
+            <ital></ital>
+            <cég></cég>
+            <Alkalmazott A_ID="" B_FID="">
+                <név></név>
+                <műszak></műszak>
+                <fizetés></fizetés>
+            </Alkalmazott>
+        </Bár>
+        <Résztvevő R_ID="" FESZ_FID="">
+            <név></név>
+            <diákigazolvány></diákigazolvány>
+            <lakcím>
+                <település></település>
+                <utca></utca>
+                <házszám></házszám>
+            </lakcím>
+            <Nyelvtudás NY_ID="" R_FID="">
+                <nyelv></nyelv>
+                <szint></szint>
+            </Nyelvtudás>
+        </Résztvevő>
+        <közvélemény K_ID="" R_FID="">
+             <kérdező></kérdező>
+        </közvélemény>
+    </Fesztivál>
+</Fesztiválok>
