@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
-<konyvek xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
-					xs:noNamespaceSchemaLocation="SL_DogWorld.xsd">
+<konyvek xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"	xsi:noNamespaceSchemaLocation="SL_DogWorld.xsd">
     <konyv isbn="0836217462">
         <cim>DogWorld</cim>
         <szerzo> Charles M. Schulz</szerzo>
