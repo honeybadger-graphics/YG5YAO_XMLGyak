@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<YG5YAO_Orarend>
+    <Ora Id="01" TIPUS="Eloadas">
+        <Kurzusnev>WEB technologiak</Kurzusnev>
+        <Oktato>Agardi Anita </Oktato>
+        <Tanterem>XXX A1 III. em. 305-306</Tanterem>
+        <Idopont>
+            <Nap>Hetfo</Nap>
+            <Kezdet>14</Kezdet>
+            <Vege>16</Vege>
+        </Idopont>
+        <Szak>Mernokinformatikus</Szak>
+    </Ora>
+</YG5YAO_Orarend>
