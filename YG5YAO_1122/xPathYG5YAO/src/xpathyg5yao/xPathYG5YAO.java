@@ -40,7 +40,7 @@ public class xPathYG5YAO {
 			//utolsó elõtti student element, amely ....
 			String yg5yao5="class/student[last()-1]";
 			//elsõ két student element, amely....
-			String yg5yao6="class/student[postion()=1 or position()=2]";
+			String yg5yao6="class/student[position()=1 or position()=2]";
 			//válassza ki class root összes gyerek elemét
 			String yg5yao7="class/*";
 			//összes student element ahol van legalább egy valamilyen attributum
@@ -50,14 +50,23 @@ public class xPathYG5YAO {
 			//student element ahol kor >20!
 			String yg5yao10="class/student[number(kor)>20]";
 			// összes student elem összes keresztnev vagy vezeteknev csomópontot
-			String yg5yao11="//studnet[name(keresztnev) and name(vezeteknev)]";
+			String yg5yao11="//student[name(keresztnev) and name(vezeteknev)]";
 			
-			NodeList nodeList= (NodeList) xPath.compile(yg5yao).evaluate(document, XPathConstants.NODESET);
+			NodeList nodeList= (NodeList) xPath.compile(yg5yao11).evaluate(document, XPathConstants.NODESET);
 			for(int i=0;i<nodeList.getLength();i++) {
 				Node node = nodeList.item(i);
-				System.out.println();
+				System.out.println("Aktuális elem: "+node.getNodeName());
+				if(node.getNodeType()==Node.ELEMENT_NODE && node.getNodeName().equals("student")) {
+					Element element = (Element) node;
+					System.out.println("ID: "+element.getAttribute("id"));
+					System.out.println("Keresztnev: "+element.getElementsByTagName("keresztnev").item(0).getTextContent());
+					System.out.println("Vezeteknev: "+element.getElementsByTagName("vezeteknev").item(0).getTextContent());
+					System.out.println("Becenev: "+element.getElementsByTagName("becenev").item(0).getTextContent());
+					System.out.println("Kor: "+element.getElementsByTagName("kor").item(0).getTextContent());
+
+					}
+				}
 			}
-		}
 		catch(ParserConfigurationException | SAXException | IOException | XPathExpressionException e) {
 			e.printStackTrace();
 		}
