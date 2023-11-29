@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <h1>Simko Levente - 2023/24. I.felev</h1>
+        <table border="1">
+            <tr bgcolor="#355e3b">
+                <th>ID</th><th>TIPUS</th><th>Kurzusnev</th><th>Oktato</th><th>Tanterem</th><th>Nap</th><th>Kezdet</th><th>Vege</th><th>Szak</th>
+            </tr>
+            <tr>
+                <td>01</td><td>Eloadas</td><td>WEB technologiak</td><td>Agardi Anita </td><td>XXX A1 III. em. 305-306</td><td>Hetfo</td><td>14</td><td>16</td><td>Mernokinformatikus</td>
+            </tr>
+            <tr>
+                <td>02</td><td>Gyakorlat</td><td>WEB technologiak</td><td>Agardi Anita</td><td>In/202 In II. em. 202</td><td>Hetfo</td><td>16</td><td>18</td><td>Mernokinformatikus</td>
+            </tr>
+            <tr>
+                <td>03</td><td>Eloadas</td><td>Adatkezeles XMLben</td><td>Dr. Bednarik Laszlo</td><td>XXXII A1 magasfsz</td><td>Kedd</td><td>12</td><td>14</td><td>Mernokinformatikus</td>
+            </tr>
+            <tr>
+                <td>04</td><td>Eloadas</td><td>WEBes alkalmazasok CSharp</td><td>Arvai Laszlo</td><td>In/101 In I. e. 101</td><td>Kedd</td><td>14</td><td>16</td><td>Mernokinformatikus</td>
+            </tr>
+            <tr>
+                <td>05</td><td>Gyakorlat</td><td>WEBes alkalmazasok CSharp</td><td>Dr. Mileff Peter</td><td>In/101 In I. e. 101</td><td>Kedd</td><td>16</td><td>18</td><td>Mernokinformatikus</td>
+            </tr>
+            <tr>
+                <td>06</td><td>Gyakorlat</td><td>Adatkezeles XMLben</td><td>Dr. Bednarik Laszlo</td><td>In/101 In I. e. 101</td><td>Szerda</td><td>10</td><td>12</td><td>Mernokinformatikus</td>
+            </tr>
+        </table>
+    </body>
+</html>
