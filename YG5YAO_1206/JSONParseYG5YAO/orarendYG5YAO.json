@@ -1,0 +1,80 @@
+[
+  {
+    "@Id": "01",
+    "@TIPUS": "Eloadas",
+    "Kurzusnev": "WEB technologiak",
+    "Oktato": "Agardi Anita",
+    "Tanterem": "XXX A1 III. em. 305-306",
+    "Idopont": {
+      "Nap": "Hetfo",
+      "Kezdet": "14",
+      "Vege": "16"
+    },
+    "Szak": "Mernokinformatikus"
+  },
+  {
+    "@Id": "02",
+    "@TIPUS": "Gyakorlat",
+    "Kurzusnev": "WEB technologiak",
+    "Oktato": "Agardi Anita",
+    "Tanterem": "In/202 In II. em. 202",
+    "Idopont": {
+      "Nap": "Hetfo",
+      "Kezdet": "16",
+      "Vege": "18"
+    },
+    "Szak": "Mernokinformatikus"
+  },
+  {
+    "@Id": "03",
+    "@TIPUS": "Eloadas",
+    "Kurzusnev": "Adatkezeles XMLben",
+    "Oktato": "Dr. Bednarik Laszlo",
+    "Tanterem": "XXXII A1 magasfsz",
+    "Idopont": {
+      "Nap": "Kedd",
+      "Kezdet": "12",
+      "Vege": "14"
+    },
+    "Szak": "Mernokinformatikus"
+  },
+  {
+    "@Id": "04",
+    "@TIPUS": "Eloadas",
+    "Kurzusnev": "WEBes alkalmazasok CSharp",
+    "Oktato": "Arvai Laszlo",
+    "Tanterem": "In/101 In I. e. 101",
+    "Idopont": {
+      "Nap": "Kedd",
+      "Kezdet": "14",
+      "Vege": "16"
+    },
+    "Szak": "Mernokinformatikus"
+  },
+  {
+    "@Id": "05",
+    "@TIPUS": "Gyakorlat",
+    "Kurzusnev": "WEBes alkalmazasok CSharp",
+    "Oktato": "Dr. Mileff Peter",
+    "Tanterem": "In/101 In I. e. 101",
+    "Idopont": {
+      "Nap": "Kedd",
+      "Kezdet": "16",
+      "Vege": "18"
+    },
+    "Szak": "Mernokinformatikus"
+  },
+  {
+    "@Id": "06",
+    "@TIPUS": "Gyakorlat",
+    "Kurzusnev": "Adatkezeles XMLben",
+    "Oktato": "Dr. Bednarik Laszlo",
+    "Tanterem": "In/101 In I. e. 101",
+    "Idopont": {
+      "Nap": "Szerda",
+      "Kezdet": "10",
+      "Vege": "12"
+    },
+    "Szak": "Mernokinformatikus"
+  }
+]
