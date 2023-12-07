@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.example.org/XMLShemaYG5YAO"
+	elementFormDefault="qualified">
+	<xs:element name="root">
+        <xs:complexType>
+            <xs:sequence>
+                <!--Légitársaság meghatározás-->
+                <xs:element name="Légitársaság" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Név" type="xs:string"/>
+                            <xs:element name="Weboldal" type="xs:string"/>
+                            <xs:element name="Elérhetöség">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="E-mailcím" type="emailTipus" />
+													<xs:element name="Telefonszám" type="telefonTipus" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="LTársaságID" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+                <!--Repülö_Tipus meghatározás-->
+                <xs:element name="Repülö_Tipus" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Gyartó" type="xs:string"/>
+                            <xs:element name="Elnevezés" type="xs:string"/>
+                            <xs:element name="Hajtómű" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="RTipusID" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+                <!--Flotta meghatározás-->
+                <xs:element name="Flotta" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Darabszám" type="xs:integer"/>
+                        </xs:sequence>
+                        <xs:attribute name="LTársaságID" type="xs:string" />
+                        <xs:attribute name="RTipusID" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+                <!--Repülö meghatározás-->
+                <xs:element name="Repülö" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Gyártásiszám" type="xs:string"/>
+                            <xs:element name="Hívószám" type="xs:string"/>
+                            <xs:element name="Személyzet" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                        <xs:attribute name="RepülöID" type="xs:string" />
+                        <xs:attribute name="LTársaságID" type="xs:string" />
+                        <xs:attribute name="RTipusID" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+                <!--Járat meghatározás-->
+                <xs:element name="Járat" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Indulás" type="indulasCelTipus"/>
+                            <xs:element name="Cél" type="indulasCelTipus"/>
+                            <xs:element name="Idöpont" type="idopontTipus"/>
+                        </xs:sequence>
+                        <xs:attribute name="JáratID" type="xs:string" />
+                        <xs:attribute name="RepülöID" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+                <!--Utas meghatározás-->
+                <xs:element name="Utas" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Név" type="xs:string"/>
+                            <xs:element name="Elérhetöség">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="E-mailcím" type="emailTipus" />
+													<xs:element name="Telefonszám" type="telefonTipus" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+                            <xs:element name="Poggyász" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="UtasID" type="xs:string" />
+                        <xs:attribute name="JáratID" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <!--PK meghatározás egyedeknek-->
+        <xs:key name="Key_legitarsasag">
+			<xs:selector xpath="Légitársaság" />
+			<xs:field xpath="@LTársaságID" />
+		</xs:key>
+		<xs:key name="Key_rtipus">
+			<xs:selector xpath="Repülö_Tipus" />
+			<xs:field xpath="@RTipusID" />
+		</xs:key>
+		<xs:key name="Key_repulo">
+			<xs:selector xpath="Repülö" />
+			<xs:field xpath="@RepülöID" />
+		</xs:key>
+		<xs:key name="Key_jarat">
+			<xs:selector xpath="Járat" />
+			<xs:field xpath="@JáratID" />
+		</xs:key>
+		<xs:key name="Key_utas">
+			<xs:selector xpath="Utas" />
+			<xs:field xpath="@UtasID" />
+		</xs:key>
+        <!--FK meghatározás egyedeknek-->
+		<xs:keyref name="FKey_flotta_legitarsasag"
+			refer="Key_legitarsasag">
+			<xs:selector xpath="Flotta" />
+			<xs:field xpath="@LTársaságID" />
+		</xs:keyref>
+        <xs:keyref name="FKey_flotta_repulo_tipus"
+			refer="Key_rtipus">
+			<xs:selector xpath="Flotta" />
+			<xs:field xpath="@RTipusID" />
+		</xs:keyref>
+        <xs:keyref name="FKey_repulo_legitarsasag"
+			refer="Key_legitarsasag">
+			<xs:selector xpath="Repülö" />
+			<xs:field xpath="@LTársaságID" />
+		</xs:keyref>
+        <xs:keyref name="FKey_repulo_repulo_tipus"
+			refer="Key_rtipus">
+			<xs:selector xpath="Repülö" />
+			<xs:field xpath="@RTipusID" />
+		</xs:keyref>
+        <xs:keyref name="FKey_jarat_repulo"
+        refer="Key_repulo">
+            <xs:selector xpath="Járat" />
+            <xs:field xpath="@RepülöID" />
+        </xs:keyref>
+        <xs:keyref name="FKey_utas_jarat"
+        refer="Key_jarat">
+            <xs:selector xpath="Utas" />
+            <xs:field xpath="@JáratID" />
+        </xs:keyref>
+    </xs:element>
+    <!--Sajáttípusok meghatározás-->
+    <xs:simpleType name="emailTipus">
+		<xs:restriction base="xs:string">
+            <!--Egyszerü email-->
+			<xs:pattern value="[a-zA-Z]{0,30}[0-9]{0,4}[@][a-z]{2,9}[.][a-z]{2,3}" />
+		</xs:restriction>
+	</xs:simpleType>
+    <xs:simpleType name="telefonTipus">
+		<xs:restriction base="xs:string">
+            <!--+36XX-XXX-XXXX-->
+			<xs:pattern value="[+][3]{1}[6]{1}[1-9]{1}[0-9]{1}[-][0-9]{3}[-][0-9]{4}" />
+            <!--+361-XXX-XXXX-->
+			<xs:pattern value="[+][3]{1}[6]{1}[1]{1}[-][0-9]{3}[-][0-9]{4}"/>
+		</xs:restriction>
+	</xs:simpleType>
+    <!--IATA kód https://en.wikipedia.org/wiki/International_Air_Transport_Association -->
+    <xs:simpleType name="indulasCelTipus">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z]{3}" />
+		</xs:restriction>
+	</xs:simpleType>
+    <!--egyszerü idopont 2023-2025.MM.DD-->
+    <xs:simpleType name="idopontTipus">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[2][0][2][3-5][.][0-1][0-9][.][0-3][0-9]" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
