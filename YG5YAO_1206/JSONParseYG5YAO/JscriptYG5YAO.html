@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-	<meta charset="UTF-8">
-	<title>JSON Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON Test</title>
 </head>
 <body>
-	<h2> Orarend YG5YAO </h2>
-	<div id="myData"></div>
-	<script>
-		fetch('orarendYG5YAO.json', {mode:'no-cors'})
-			.then(function (response) {
-				return response.json();
-			})
-			.then(function (data) {
-				appendData(data);
-			})
-			.catch(function(err) {
-				console.log('error: '+err);
-			});
-			function appendData(data){
-			var mainContainer = document.getElementById("myData");
-				for (var i =0; i<data.lenght; i++){
-				var div = document.createElement("div");
-				var h3 = document.createElement("h3");
-				h3.InnerHTML = 'Ora ' +i;
-				div.InnerHTML = 'Targy: '+data[i].Kurzusnev+'<br>'+'Helyszin: '+data[i].Tanterem+'<br>'+'Oktato:'+data[i].Oktato+'<br>'+'Szak:'+data[i].Szak;
-				mainContainer.appendChild(h3);
-				mainContainer.appendChild(div);
-				}
-			}
-	</script>
+    <h2>Orarend YG5YAO</h2>
+    <div id="myData"></div>
+    <script>
+        fetch('orarendYG5YAO.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                var h3 = document.createElement("h3");
+                h3.innerHTML = 'Ora: '+(i+1)
+                div.innerHTML = 'Kurzus: ' + data[i].Kurzusnev + '<br>' +'Oktato: '+ data[i].Oktato + '<br>' +'Tanterem: '+ data[i].Tanterem+ '<br>' +'Idopont: '+'<br>'+'Nap: '+ data[i].Idopont.Nap+
+                '<br>'+'Kezdet: '+ data[i].Idopont.Kezdet+'<br>'+'Vege: '+ data[i].Idopont.Vege+'<br>'+'Szak: '+ data[i].Szak;
+                mainContainer.appendChild(h3);
+                mainContainer.appendChild(div);
+            }
+        }
+    </script>
 </body>
 </html>
