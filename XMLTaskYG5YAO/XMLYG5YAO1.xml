@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+    <Légitársaság LTársaságID="LH">
+        <Név>Deutsche Lufthansa AG</Név>
+        <Weboldal>lufthansa.com</Weboldal>
+        <Elérhetöség>
+            <E-mailcím>contactCustomer@lh.com</E-mailcím>
+            <Telefonszám>+361-429-2200</Telefonszám>
+        </Elérhetöség>
+    </Légitársaság>
+    <Légitársaság LTársaságID="BA">
+        <Név>British Airways</Név>
+        <Weboldal>britishairways.com</Weboldal>
+        <Elérhetöség>
+            <E-mailcím>customerContact@ba.com</E-mailcím>
+            <Telefonszám>+361-777-4747</Telefonszám>
+        </Elérhetöség>
+    </Légitársaság>
+    <Légitársaság LTársaságID="AA">
+        <Név>American Airlines, Inc.</Név>
+        <Weboldal>www.aa.com</Weboldal>
+        <Elérhetöség>
+            <E-mailcím>customerHelp@aa.com</E-mailcím>
+            <Telefonszám>+361-429-2346</Telefonszám>
+        </Elérhetöség>
+    </Légitársaság>
+    <Repülö_Tipus RTipusID="A380">
+        <Gyartó>Airbus</Gyartó>
+        <Elnevezés>Airbus A380</Elnevezés>
+        <Hajtómű>4x Rolls-Royce Trent 900</Hajtómű>
+    </Repülö_Tipus>
+    <Repülö_Tipus RTipusID="B777">
+        <Gyartó>Boeing Commercial Airplanes</Gyartó>
+        <Elnevezés>Boeing 777</Elnevezés>
+        <Hajtómű>2x General Electric GE90</Hajtómű>
+    </Repülö_Tipus>
+    <Repülö_Tipus RTipusID="B787D">
+        <Gyartó>Boeing Commercial Airplanes</Gyartó>
+        <Elnevezés>Boeing 787 Dreamliner</Elnevezés>
+        <Hajtómű>2x Rolls-Royce Trent 1000</Hajtómű>
+    </Repülö_Tipus>
+    <Flotta LTársaságID="LH" RTipusID="B787D">
+        <Darabszám>358</Darabszám>
+    </Flotta>
+    <Flotta LTársaságID="AA" RTipusID="A380">
+        <Darabszám>102</Darabszám>
+    </Flotta>
+    <Flotta LTársaságID="BA" RTipusID="B777">
+        <Darabszám>246</Darabszám>
+    </Flotta>
+    <Repülö LTársaságID="AA" RTipusID="A380" RepülöID="AA_01">
+        <Gyártásiszám>A380-122-449</Gyártásiszám>
+        <Hívószám>AA-01</Hívószám>
+        <Személyzet>Piloták</Személyzet>
+        <Személyzet>Légiutaskisérök</Személyzet>
+    </Repülö>
+    <Repülö LTársaságID="LH" RTipusID="B787D" RepülöID="LH_02">
+        <Gyártásiszám>B787-122-001</Gyártásiszám>
+        <Hívószám>LH-02</Hívószám>
+        <Személyzet>Piloták</Személyzet>
+        <Személyzet>Légiutaskisérök</Személyzet>
+    </Repülö>
+    <Repülö LTársaságID="BA" RTipusID="B777" RepülöID="BA_03">
+        <Gyártásiszám>B777-287-019</Gyártásiszám>
+        <Hívószám>BA-03</Hívószám>
+        <Személyzet>Piloták</Személyzet>
+        <Személyzet>Légiutaskisérök</Személyzet>
+    </Repülö>
+    <Járat JáratID="J_01" RepülöID="BA_03">
+        <Indulás>LHR</Indulás>
+        <Cél>BUD</Cél>
+        <Idöpont>2024.01.12</Idöpont>
+    </Járat>
+    <Járat JáratID="J_02" RepülöID="LH_02">
+        <Indulás>BER</Indulás>
+        <Cél>BUD</Cél>
+        <Idöpont>2024.02.09</Idöpont>
+    </Járat>
+    <Járat JáratID="J_03" RepülöID="AA_01">
+        <Indulás>LAX</Indulás>
+        <Cél>LHR</Cél>
+        <Idöpont>2024.01.24</Idöpont>
+    </Járat>
+    <Utas JáratID="J_01" UtasID="003">
+        <Név>Simkó Levente</Név>
+        <Elérhetöség>
+            <E-mailcím>smlevente@gmail.com</E-mailcím>
+            <Telefonszám>+3670-429-5555</Telefonszám>
+        </Elérhetöség>
+        <Poggyász>2db kézi</Poggyász>
+    </Utas>
+    <Utas JáratID="J_03" UtasID="012">
+        <Név>Magyar Márk</Név>
+        <Elérhetöség>
+            <E-mailcím>mmark1996@outlook.com</E-mailcím>
+            <Telefonszám>+3630-479-8888</Telefonszám>
+        </Elérhetöség>
+        <Poggyász>1db nagy</Poggyász>
+    </Utas>
+    <Utas JáratID="J_02" UtasID="048">
+        <Név>Kiss Szabina</Név>
+        <Elérhetöség>
+            <E-mailcím>szabinakiss14@gmail.com</E-mailcím>
+            <Telefonszám>+3620-888-2200</Telefonszám>
+        </Elérhetöség>
+        <Poggyász>1db kézi</Poggyász>
+    </Utas>
+</root>
