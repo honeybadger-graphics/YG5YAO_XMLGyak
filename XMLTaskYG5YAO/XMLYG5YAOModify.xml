@@ -19,7 +19,7 @@
     </Légitársaság>
     <!--Lt American Airlines egyed-->
      <Légitársaság LTársaságID="AA">
-        <Név>American Airlines, Inc.</Név>
+        <Név>American Airlines</Név>
         <Weboldal>www.aa.com</Weboldal>
         <Elérhetöség>
             <E-mailcím>customerSupport@aa.com</E-mailcím>
@@ -95,7 +95,7 @@
     <Utas JáratID="J_01" UtasID="003">
         <Név>Simkó Levente</Név>
         <Elérhetöség>
-            <E-mailcím>smlevente@gmail.com</E-mailcím>
+            <E-mailcím>smklevente@gmail.com</E-mailcím>
             <Telefonszám>+3670-429-5555</Telefonszám>
         </Elérhetöség>
         <Poggyász>1db nagy</Poggyász>

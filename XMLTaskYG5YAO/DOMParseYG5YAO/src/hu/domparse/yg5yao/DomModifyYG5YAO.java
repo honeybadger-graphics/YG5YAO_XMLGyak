@@ -28,23 +28,32 @@ public class DomModifyYG5YAO {
 			document.getDocumentElement().normalize();
 			// Gyökér elem megkeresése
 			System.out.println("<" + document.getDocumentElement().getNodeName()+">");
-
-
-
-			//Utas adatai kiírása id alapján
+			//utas adatmódosítások(2db)
 			System.out.println("<!-------Modosítás előtt------->");
 			hu.domparse.yg5yao.DomQueryYG5YAO.queryID(document, "Utas", "003");
 			queryIDChangeThings(document, "Utas", "003","Poggyász","1db nagy");
 			System.out.println("<!-------Modosítás után------->");
 			hu.domparse.yg5yao.DomQueryYG5YAO.queryID(document, "Utas", "003");
 			System.out.println("<!-------Modosítás előtt------->");
+			hu.domparse.yg5yao.DomQueryYG5YAO.queryID(document, "Utas", "003");
+			queryIDChangeThings(document, "Utas", "003","E-mailcím","smklevente@gmail.com");
+			System.out.println("<!-------Modosítás után------->");
+			hu.domparse.yg5yao.DomQueryYG5YAO.queryID(document, "Utas", "003");
+			//repülö módosítás (1db)
+			System.out.println("<!-------Modosítás előtt------->");
 			hu.domparse.yg5yao.DomQueryYG5YAO.queryID(document, "Repülö", "AA_01");
 			queryIDChangeThings(document, "Repülö", "AA_01","Hívószám","AA_02");
 			System.out.println("<!-------Modosítás után------->");
 			hu.domparse.yg5yao.DomQueryYG5YAO.queryID(document, "Repülö", "AA_01");
+			//Légitársaségok módosítása (2db)
 			System.out.println("<!-------Modosítás előtt------->");
 			hu.domparse.yg5yao.DomQueryYG5YAO.queryID(document, "Légitársaság", "AA");
 			queryIDChangeThings(document, "Légitársaság", "AA","E-mailcím","customerSupport@aa.com");
+			System.out.println("<!-------Modosítás után------->");
+			hu.domparse.yg5yao.DomQueryYG5YAO.queryID(document, "Légitársaság", "AA");
+			System.out.println("<!-------Modosítás előtt------->");
+			hu.domparse.yg5yao.DomQueryYG5YAO.queryID(document, "Légitársaság", "AA");
+			queryIDChangeThings(document, "Légitársaság", "AA","Név","American Airlines");
 			System.out.println("<!-------Modosítás után------->");
 			hu.domparse.yg5yao.DomQueryYG5YAO.queryID(document, "Légitársaság", "AA");
 
@@ -83,7 +92,7 @@ public class DomModifyYG5YAO {
 				Node nodecim = list.item(i);
 				if (nodecim.getNodeType() == Node.ELEMENT_NODE) {
 					Element elemValtoztat = (Element) node;
-					// id vizsgálata és ha megegyezzik vas1-el akkor irányítószám módosítás
+					// lekéri az id-t és megnézi egyezik-e a keresettel
 					if (element.getAttribute(holKeres).equals(mitKeres)) {
 						elemValtoztat.getElementsByTagName(holValtoztat).item(0).setTextContent(mireValtoztat);
 
